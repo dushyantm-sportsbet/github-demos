@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show Event Name
-        run: echo "${{ toJSON(github.event) }}"
+        run: echo "${{ toJSON(github..event_name) }}"
       - name: Show Branch Name
-        run: echo "${{ github_branchName }}"
+        run: echo "${{ github..ref }}"
       - name: List Files
         run: |
           find . -type f
