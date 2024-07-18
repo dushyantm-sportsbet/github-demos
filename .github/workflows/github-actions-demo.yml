@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show Event Name
-        run: echo "The event that triggered this workflow is: ${{ github.event }}"
+        run: echo "${{ tojJSON(github.event) }}"
       - name: Show Branch Name
         run: echo "${{ github.brach_name }}"
         
