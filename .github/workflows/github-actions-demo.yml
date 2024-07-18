@@ -18,7 +18,7 @@ jobs:
       - name: Show Event Name
         run: echo "${{ toJSON(github.event) }}"
       - name: Show Branch Name
-        run: echo "${{ GITHUB_REF }}"
+        run: echo "${{ github_branchName }}"
       - name: List Files
         run: |
           find . -type f
