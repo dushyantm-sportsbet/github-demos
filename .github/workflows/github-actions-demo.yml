@@ -15,10 +15,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Show Event Name
         run: echo "${{ toJSON(github.event_name) }}"
       - name: Show Branch Name
         run: echo "${{ github.ref }}"
       - name: Show repositoy
-        run: echo "${{ github.repository }}"
+        run: |  # This step runs the following commands
+          git ls-files
     
